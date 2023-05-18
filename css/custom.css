@@ -1,0 +1,68 @@
+html{
+	font-family: 'Noto Sans Thai Looped', sans-serif;
+}
+nav{
+	height: 50px;
+	color: var(--primary-inverse);
+	background-color: var(--primary);
+}
+cite{
+	color: var(--muted-color);
+}
+a.contrast{
+	text-decoration: none;
+}
+
+.radius-x{
+	border-radius: 100px;
+}
+
+.width50{
+	width: 50px;
+}
+.width75{
+	width: 75px;
+}
+
+
+
+.back{
+	color: var(--priamry-inverse);
+}
+
+.call{
+	color: var(--priamry-inverse);
+	background-color: var(--secondary);
+}
+
+.food-thumb{
+	width: 120px;
+	height: 120px;
+}
+
+input.cart-quantity{
+	padding: 0;
+	height: 2.5em;
+	margin-bottom: 0;
+}
+
+.food-quantity .material-icons{
+	font-size: 36px;
+}
+.food-quantity input{
+	width: 70px;
+	margin: 0;
+}
+
+.confirm{
+	padding-left: 3rem;
+	padding-right: 3rem;
+}
+
+.modal{
+	display: none;
+}
+
+.modal:target {
+	display: flex;
+}

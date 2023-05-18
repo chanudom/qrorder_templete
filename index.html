@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/pico.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai+Looped:wght@500&display=swap" rel="stylesheet">
+
+    <title>โต๊ะ 3</title>
+  </head>
+  <body class="pt3 pb4">
+    <nav class="fixed top-0 flex col-12">
+      <div class="col-3 flex items-center justify-center"></div>
+      <div class="col-6 flex items-center justify-center">โต๊ะ 3</div>
+      <a href="#call" class="col-3 call flex items-center justify-center h5 center call p0 m0 not-rounded">เรียก<br/>พนักงาน</a>
+    </nav>
+    <main class="px2">
+      <!-- ค้นหา -->
+      <input type="search" id="search" name="search" placeholder="ค้นหา" class="input radius-x col-12">
+
+      <!-- ประเภทอาหาร -->
+      <a href="#" role="button" class="radius-x mr1">อาหาร</a>
+      <a href="#" role="button" class="outline radius-x">เครื่องดื่ม</a>
+
+      <!-- รายการอาหาร -->
+      <div class="h1 mt3 border-bottom">ส้มตำ</div>
+      <a href="food.html" class="flex border-bottom py2 contrast">
+        <div class="food-thumb mr1"><img src="https://picsum.photos/120/120?random=1" alt=""></div>
+        <div class="flex flex-auto items-center h3">ส้มตำไทย</div>
+      </a>
+      <a href="#" class="flex border-bottom py2 items-center contrast">
+        <div class="food-thumb mr1"><img src="https://picsum.photos/120/120?random=2" alt=""></div>
+        <div class="flex flex-auto h3 flex-column">ส้มตำปูปลาร้า <span class="h4">45.-</span></div>
+      </a>
+      <a href="#" class="flex border-bottom py2 items-center contrast">
+        <div class="flex flex-auto h3 flex-column">ส้มตำปูปลาร้า</div>
+      </a>
+      <a href="#" class="flex border-bottom py2 items-center contrast">
+        <div class="flex flex-auto h3 flex-column">ส้มตำปูปลาร้า<span class="h4">45.-</span></div>
+      </a>
+
+      <div class="h1 mt3 border-bottom">ยำ</div>
+      <a href="#" class="flex border-bottom py2 contrast">
+        <div class="food-thumb mr1"><img src="https://picsum.photos/120/120?random=3" alt=""></div>
+        <div class="flex flex-auto items-center h3">ยำคอหมูย่าง</div>
+      </a>
+      <a href="#" class="flex border-bottom py2 items-center contrast">
+        <div class="food-thumb mr1"><img src="https://picsum.photos/120/120?random=4" alt=""></div>
+        <div class="flex flex-auto h3 flex-column">ยำหมูยอ <span class="h4">45.-</span></div>
+      </a>
+      <a href="#" class="flex border-bottom py2 items-center contrast">
+        <div class="flex flex-auto h3 flex-column">ยำทะเล</div>
+      </a>
+      <a href="#" class="flex border-bottom py2 items-center contrast">
+        <div class="flex flex-auto h3 flex-column">ยำที่ราบสูง<span class="h4">45.-</span></div>
+      </a>
+    </main>
+
+    <!-- ปุ่มด้านล่าง -->
+    <div class="fixed center col-12 bottom-0 mb2">
+      <a href="cart.html" role="button" class="col-11">ตะกร้า 0 รายการ</a>
+    </div>
+
+    <!-- modal -->
+    <dialog id="call" class="modal" open>
+      <article class="container">
+        <a href="#close" class="close"></a>
+        <a href="#onhold" role="button" class="secondary container my2">สั่งน้ำเข็ง</a>
+        <a href="#onhold" role="button" class="secondary container my2">ขอชำระค่าอาหาร</a>
+        <a href="#onhold" role="button" class="secondary container my2">เรียกพนักงาน</a>
+      </article>
+    </dialog>
+  </body>
+</html>

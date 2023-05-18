@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/basscss.css">
+    <link rel="stylesheet" href="css/pico.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai+Looped:wght@500&display=swap" rel="stylesheet">
+
+    <title>ตะกร้าสินค้า</title>
+  </head>
+  <body class="pt3 pb4">
+    <nav class="fixed top-0 flex col-12">
+      <a href="index.html" class="col-3 flex items-center back pl2"><span class="material-icons">close</span></a>
+      <div class="col-6 flex items-center justify-center">ตะกร้าสินค้า</div>
+      <div class="col-3 flex items-center justify-center"></div>
+    </nav>
+    <main class="px2">
+
+      <!-- รายการที่สั่ง -->
+      <div id="1" class="flex items-center border-bottom py2 contrast">
+        <a href="#" onclick="remove(1)" class="material-icons width50 center mr2">close</a>
+        <div class="flex flex-auto h3 flex-column">ส้มตำไทย <cite class="h5">เผ็ดน้อย</cite></div>
+        <div class="width75">
+          <input class="cart-quantity center flex items-center mb0 py2" type="number" name="quantity" value="1" autocomplete="off">
+        </div>
+      </div>
+      <div class="flex items-center border-bottom py2 contrast">
+        <a href="#" class="material-icons width50 center mr2">close</a>
+        <div class="flex flex-auto h3">ยำคอหมูย่าง</div>
+        <div class="width75">
+          <input class="cart-quantity center flex items-center mb0 py2" type="number" name="quantity" value="2" autocomplete="off">
+        </div>
+      </div>
+      <div class="flex items-center border-bottom py2 contrast">
+        <a href="#" class="material-icons width50 center mr2">close</a>
+        <div class="flex flex-auto h3">ไส้ทอด</div>
+        <div class="width75">
+          <input class="cart-quantity center flex items-center mb0 py2" type="number" name="quantity" value="3" autocomplete="off">
+        </div>
+      </div>
+      
+
+    </main>
+
+    <!-- ปุ่มด้านล่าง -->
+    <div class="fixed center col-12 bottom-0 mb2">
+      <a href="#confirm-order" role="button" class="col-11">สั่งอาหาร</a>
+    </div>
+
+
+    <!-- modal -->
+    <dialog id="confirm-order" class="modal" open>
+      <article class="container">
+        <h3 class="center">ยืนยัน สั่งอาหาร</h3>
+        <footer class="center">
+          <a href="#onhold" role="button" class="outline mr2">รอก่อน</a>
+          <a href="#confirm" role="button" class="confirm ml2">ยืนยัน</a>
+        </footer>
+      </article>
+    </dialog>
+
+    <script type="text/javascript">
+      function remove(id) {
+        const element = document.getElementById(id);
+        element.remove();
+      }
+    </script>
+  </body>
+</html>

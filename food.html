@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/pico.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai+Looped:wght@500&display=swap" rel="stylesheet">
+
+    <title>ส้มตำไทย</title>
+  </head>
+  <body class="pt3 pb4">
+    <nav class="fixed top-0 flex col-12">
+      <a href="index.html" class="col-3 flex items-center back pl2"><span class="material-icons">close</span></a>
+      <div class="col-6 flex items-center justify-center">ส้มตำไทย</div>
+      <div class="col-3 flex items-center justify-center"></div>
+    </nav>
+    <main class="px2">
+
+      <!-- option -->
+      <div class="h3 mt3 mb2 border-bottom">ระดับความเผ็ด</div>
+      <fieldset>
+        <label for="1" class="py1">
+          <input type="radio" id="1" name="spice" value="no">
+          ไม่เผ็ด
+        </label>
+        <label for="2" class="py1">
+          <input type="radio" id="2" name="spice" value="less">
+          เผ็ดน้อยมาก (พริกก้นครก)
+        </label>
+        <label for="3" class="py1">
+          <input type="radio" id="3" name="spice" value="less">
+          เผ็ดน้อย
+        </label>
+        <label for="4" class="py1">
+          <input type="radio" id="4" name="spice" value="default" checked>
+          เผ็ดปานกลาง
+        </label>
+        <label for="5" class="py1">
+          <input type="radio" id="5" name="spice" value="less">
+          เผ็ดมาก
+        </label>
+      </fieldset>
+
+
+      <!-- หมายเหตุ -->
+      <div class="h3 mt3 mb2 border-bottom">หมายเหตุ</div>
+      <textarea id="note" name="note" rows="3"></textarea>
+
+
+      <!-- จำนวน -->
+      <div class="h3 mt3 center">จำนวน</div>
+      <div class="food-quantity flex items-center justify-center">
+        <span class="material-icons right-align mr1" onclick="increase('food-quantity')">do_not_disturb_on</span>
+        <input id="food-quantity" class="center" type="number" name="quantity" value="1" autocomplete="off">
+        <span class="material-icons left-align ml1" onclick="decrease('food-quantity')">add_circle</span>
+      </div>
+    </main>
+
+    <!-- ปุ่มด้านล่าง -->
+    <div class="fixed center col-12 bottom-0 mb2">
+      <a href="index.html" role="button" class="col-11">เพิ่มไปในตะกร้า</a>
+    </div>
+
+    <script type="text/javascript">
+      function increase(id) {
+        if(document.getElementById(id).value > 1) {
+          document.getElementById(id).value--;
+        }
+      }
+      function decrease(id) {
+        document.getElementById(id).value++;
+      }
+    </script>
+  </body>
+</html>
